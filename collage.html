@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(./img/collage.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            color: #000;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 15px;
+            }
+
+            .form-container input,
+            .form-container select,
+            .form-container button {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="form-container">
+            <h2>Registration</h2>
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter First Name">
+                <p id="msg1"></p>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter Last Name">
+                <p id="msg2"></p>
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter Age" min="1" max="100">
+                <p id="msg3"></p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email">
+                <p id="msg4"></p>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <p id="msg5"></p>
+
+                <button type="submit" id="btn">Register</button>
+                <p id="btn_msg"></p>
+
+            </div>
+        </div>
+    </div>
+    <script src="./collage.js"></script>
+</body>
+
+</html>
