@@ -107,6 +107,14 @@ btn.addEventListener('click', function () {
         return
     }
 
+    if (Edit === null && data.some(user => user.email.toLowerCase() === obj.email.toLowerCase())) {
+        msg4.innerText = "This email is already registered";
+        email.style = "outline-color: red;";
+        msg4.style = "color:red;";
+        email.focus();
+        return;
+    }
+
     if (!obj.gender) {
         msg5.innerText = "Please fill gender"
         gender.style = "outline-color: red;";
