@@ -95,6 +95,41 @@
                 font-size: 0.95rem;
             }
         }
+
+
+        @keyframes delayed-shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            1% {
+                transform: translateX(-5px);
+            }
+
+            2% {
+                transform: translateX(5px);
+            }
+
+            3% {
+                transform: translateX(-5px);
+            }
+
+            4% {
+                transform: translateX(5px);
+            }
+
+            5% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .delayed-shake {
+            animation: delayed-shake 3s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -106,19 +141,19 @@
             <div>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" placeholder="Enter First Name">
-                <p id="msg1"></p>
+                <p id="msg1" class=" delayed-shake"></p>
 
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lname" placeholder="Enter Last Name">
-                <p id="msg2"></p>
+                <p id="msg2" class=" delayed-shake"></p>
 
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age" placeholder="Enter Age" min="1" max="100">
-                <p id="msg3"></p>
+                <p id="msg3" class=" delayed-shake"></p>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter Email">
-                <p id="msg4"></p>
+                <p id="msg4" class=" delayed-shake"></p>
 
                 <label for="gender">Gender</label>
                 <select id="gender" name="gender">
@@ -127,10 +162,10 @@
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-                <p id="msg5"></p>
+                <p id="msg5" class=" delayed-shake"></p>
 
                 <button type="submit" id="btn">Register</button>
-                <p id="btn_msg"></p>
+                <p id="btn_msg" class=" delayed-shake"></p>
 
             </div>
         </div>
